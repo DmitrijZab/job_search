@@ -9,7 +9,7 @@ use Illuminate\Validation\Rule;
 class UserController extends Controller
 {
     // Show Register/Create Form
-    public function create() {
+    public function register() {
         return view('users.register');
     }
 

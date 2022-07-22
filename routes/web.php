@@ -17,15 +17,6 @@ use App\Models\Listing;
 |
 */
 
-// Common Resource Routes:
-// index - Show all listings
-// show - Show single listing
-// create - Show form to create new listing
-// store - Store new listing
-// edit - Show form to edit listing
-// update - Update listing
-// destroy - Delete listing
-
 // All Listings
 Route::get('/', [ListingController::class, 'index']);
 
@@ -44,7 +35,7 @@ Route::get('/listings/manage', [ListingController::class, 'manage'])->middleware
 // Single Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 // Show Register/Create Form
-Route::get('/register', [UserController::class, 'create'])->middleware('guest');
+Route::get('/register', [UserController::class, 'register'])->middleware('guest');
 // Create New User
 Route::post('/users', [UserController::class, 'store']);
 // Log User Out
